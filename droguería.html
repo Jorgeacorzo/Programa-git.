@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion de Droguerias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestion de Droguerias</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio-sesion">Inicio de Sesion</a></li>
+                <li><a href="#panel-vendedor">Panel de Vendedor</a></li>
+                <li><a href="#inventarios">Inventarios</a></li>
+                <li><a href="#balances">Balances</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio-sesion">
+        <h2>Inicio de Sesion</h2>
+        <form action="/login" method="post">
+            <label for="email">Correo Electronico:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Contrasena:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Iniciar Sesion</button>
+            <p><a href="/forgot-password">Olvido su contrasena?</a></p>
+            <p><a href="/register">Crear una nueva cuenta</a></p>
+        </form>
+    </section>
+
+    <section id="panel-vendedor" style="display: none;">
+        <h2>Panel de Vendedor</h2>
+        <aside>
+            <img src="foto jorge andres" alt="Foto del Vendedor">
+            <p>Nombre del Vendedor</p>
+            <p>correo@example.com</p>
+            <nav>
+                <ul>
+                    <li><a href="#perfil">Perfil</a></li>
+                    <li><a href="#ventas">Ventas</a></li>
+                    <li><a href="#inventarios">Inventarios</a></li>
+                    <li><a href="#balances">Balances</a></li>
+                    <li><a href="#configuracion">Configuracion</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </section>
+
+    <section id="inventarios" style="display: none;">
+        <h2>Inventarios</h2>
+        <div>
+            <h3>Productos</h3>
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>ID</th>
+                    <th>Precio</th>
+                    <th>Dosis</th>
+                    <th>Laboratorio</th>
+                </tr>
+                <tr>
+                    <td>Producto 1</td>
+                    <td>001</td>
+                    <td>35.000 COP</td>
+                    <td>500mg</td>
+                    <td>Laboratorio GENFAR</td>
+                </tr>
+                <tr>
+                    <td>Producto 2</td>
+                    <td>002</td>
+                    <td>$184.000 COP</td>
+                    <td>250mg</td>
+                    <td>Laboratorio PROCAPS</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="balances" style="display: none;">
+        <h2>Balances</h2>
+        <div>
+            <h3>Informacion Auditoria</h3>
+            <p>Grupo Auditor: Auditor Col</p>
+            <p>Correo Electronico: auditor@audicol.com</p>
+            <p>Direccion: Calle  453</p>
+            <h3>Balance Total</h3>
+            <p>ID del Balance: tr249</p>
+            <p>Efectivo Total: $86.5680.925 COP</p>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
